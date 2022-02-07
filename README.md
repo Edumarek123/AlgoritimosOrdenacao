@@ -2,5 +2,7 @@
 
 Estudo voltado a algorítimos de ordenação de arrays com simulação gráfica em C++ SDL2.
 
-Autor: Eduardo Marek.
-Data: 01/2022.
+Applying sorting algorithms in graphic visualization in C++ SDL2.
+
+Autor(author): Eduardo Marek.
+Data(date): 01/2022.
