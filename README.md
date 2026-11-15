@@ -2,58 +2,75 @@
 
 # Sorting Algorithms Visualizer
 
-**An interactive C++ / SDL2 study of classic sorting algorithms.**
+**A C++ and SDL2 project for observing classic sorting algorithms in action.**
 
-![Language](https://img.shields.io/badge/language-C%2B%2B-00599C?logo=cplusplus&logoColor=white)
+![C++](https://img.shields.io/badge/C%2B%2B-00599C?logo=cplusplus&logoColor=white)
 ![Graphics](https://img.shields.io/badge/graphics-SDL2-1f6feb)
-![Status](https://img.shields.io/badge/status-educational%20project-lightgrey)
+![Project](https://img.shields.io/badge/type-educational%20visualizer-lightgrey)
 
 </div>
 
+## Contents
+
+- [Overview](#overview)
+- [Algorithms](#algorithms)
+- [Execution flow](#execution-flow)
+- [Requirements](#requirements)
+- [Build and run](#build-and-run)
+- [Repository structure](#repository-structure)
+- [Implementation notes](#implementation-notes)
+- [License](#license)
+
 ## Overview
 
-This repository explores how classic sorting algorithms transform an array through a graphical SDL2 visualization. The goal is to make the behavior of each algorithm easier to inspect while practicing C++, algorithm design, and rendering.
+This project explores sorting algorithms through a graphical C++ application built with SDL2. Instead of looking only at the final sorted array, the visualizer is intended to make the sorting process observable.
+
+It is a learning project focused on algorithm behavior, C++ and real-time graphical rendering.
 
 ## Algorithms
 
-| Algorithm | Implementation |
+| Source file | Algorithm |
 |---|---|
-| Insertion Sort | [insertion_sort.cpp](insertion_sort.cpp) |
-| Quick Sort | [quick_sort.cpp](quick_sort.cpp) |
-| Selection Sort | [selection_sort.cpp](selection_sort.cpp) |
+| [insertion_sort.cpp](insertion_sort.cpp) | Insertion Sort |
+| [quick_sort.cpp](quick_sort.cpp) | Quick Sort |
+| [selection_sort.cpp](selection_sort.cpp) | Selection Sort |
 
-## Technology stack
+## Execution flow
 
-- **C++** — algorithm implementation and application logic
-- **SDL2** — graphical rendering and interaction
+```mermaid
+flowchart LR
+    A[Initialize SDL2] --> B[Create data set]
+    B --> C[Select sorting implementation]
+    C --> D[Execute sorting steps]
+    D --> E[Render current state]
+    E --> D
+    D --> F[Finish / close window]
+```
 
-## Getting started
+The diagram represents the intended visualization flow; exact rendering and interaction behavior depend on the selected source implementation.
 
-### Prerequisites
+## Requirements
 
-- A C++ compiler with C++ support
-- SDL2 development libraries
-- A Linux environment compatible with the included helper script
+- C++ compiler
+- SDL2
+- SDL2_image
+- Linux environment compatible with the supplied shell script
 
-### Build
+## Build and run
 
-The repository includes a compilation helper:
+The included [comp.sh](comp.sh) script is configured to compile and execute `quick_sort.cpp`. The insertion-sort and selection-sort compiler commands are present as comments in the script.
 
 ```bash
 chmod +x comp.sh
 ./comp.sh
 ```
 
-Review the script before running it if your SDL2 installation uses non-standard paths.
+The script creates a temporary executable named `model`, runs it, and removes it afterward. If you want to retain the binary or select another algorithm, edit the build command locally or compile the corresponding source file manually.
 
-### Run
-
-Launch the executable produced by the build script. The exact output filename is determined by `comp.sh`.
-
-## Repository layout
+## Repository structure
 
 ```text
-.
+AlgoritimosOrdenacao/
 ├── insertion_sort.cpp
 ├── quick_sort.cpp
 ├── selection_sort.cpp
@@ -61,21 +78,12 @@ Launch the executable produced by the build script. The exact output filename is
 └── README.md
 ```
 
-## Learning objectives
+The repository also includes SDL2 shared-library files. Their compatibility with your operating system and architecture is not guaranteed.
 
-- Compare different sorting strategies
-- Understand array traversal and element movement
-- Practice C++ application structure
-- Use SDL2 for real-time visualization
+## Implementation notes
 
-## Project status
-
-This is an educational project. It is not intended to be a formally benchmarked sorting library.
-
-## Contributing
-
-Suggestions and improvements are welcome through GitHub issues or pull requests.
+This repository is a visual learning tool, not a benchmark suite. Meaningful performance comparisons require identical input data, compiler settings, and measurement methodology.
 
 ## License
 
-No license file was identified in the repository at the time of writing. Contact the author before redistributing or reusing the project.
+No `LICENSE` file is currently included. Unless a license is added, reuse and redistribution permissions are not granted by this repository.
