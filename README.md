@@ -1,29 +1,81 @@
+<div align="center">
+
 # Sorting Algorithms Visualizer
 
-A C++ project for studying array-sorting algorithms through graphical visualization using SDL2.
+**An interactive C++ / SDL2 study of classic sorting algorithms.**
 
-## Included algorithms
+![Language](https://img.shields.io/badge/language-C%2B%2B-00599C?logo=cplusplus&logoColor=white)
+![Graphics](https://img.shields.io/badge/graphics-SDL2-1f6feb)
+![Status](https://img.shields.io/badge/status-educational%20project-lightgrey)
 
-- Insertion Sort
-- Quick Sort
-- Selection Sort
+</div>
 
-## Technologies
+## Overview
 
-- C++
-- SDL2
+This repository explores how classic sorting algorithms transform an array through a graphical SDL2 visualization. The goal is to make the behavior of each algorithm easier to inspect while practicing C++, algorithm design, and rendering.
 
-## Repository contents
+## Algorithms
 
-- `insertion_sort.cpp` — insertion sort implementation
-- `quick_sort.cpp` — quick sort implementation
-- `selection_sort.cpp` — selection sort implementation
-- `comp.sh` — compilation helper script
+| Algorithm | Implementation |
+|---|---|
+| Insertion Sort | [insertion_sort.cpp](insertion_sort.cpp) |
+| Quick Sort | [quick_sort.cpp](quick_sort.cpp) |
+| Selection Sort | [selection_sort.cpp](selection_sort.cpp) |
 
-## Purpose
+## Technology stack
 
-The project makes the behavior of classic sorting algorithms easier to observe and compare. It was created as a learning exercise in algorithms, C++, and graphical programming.
+- **C++** — algorithm implementation and application logic
+- **SDL2** — graphical rendering and interaction
 
-## Status
+## Getting started
 
-Educational project. Build requirements and execution details may depend on the local SDL2 development environment.
+### Prerequisites
+
+- A C++ compiler with C++ support
+- SDL2 development libraries
+- A Linux environment compatible with the included helper script
+
+### Build
+
+The repository includes a compilation helper:
+
+```bash
+chmod +x comp.sh
+./comp.sh
+```
+
+Review the script before running it if your SDL2 installation uses non-standard paths.
+
+### Run
+
+Launch the executable produced by the build script. The exact output filename is determined by `comp.sh`.
+
+## Repository layout
+
+```text
+.
+├── insertion_sort.cpp
+├── quick_sort.cpp
+├── selection_sort.cpp
+├── comp.sh
+└── README.md
+```
+
+## Learning objectives
+
+- Compare different sorting strategies
+- Understand array traversal and element movement
+- Practice C++ application structure
+- Use SDL2 for real-time visualization
+
+## Project status
+
+This is an educational project. It is not intended to be a formally benchmarked sorting library.
+
+## Contributing
+
+Suggestions and improvements are welcome through GitHub issues or pull requests.
+
+## License
+
+No license file was identified in the repository at the time of writing. Contact the author before redistributing or reusing the project.
